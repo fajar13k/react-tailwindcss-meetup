@@ -26,6 +26,17 @@ class App extends Component {
             </li>
           </ul>
         </header>
+
+        {/* Hero header */}
+        <div className="bg-meetup-blue text-center py-8 pb-20">
+          <div className="text-white text-4xl font-bold">Find your next event</div>
+          <div className="text-gray-400">
+            <span className="mr-2">41 events in your group</span>
+            <span className="mr-2">&middot;</span>
+            <span>3,981 events near you</span>
+          </div>
+        </div>
+
       </div>
     );
   }

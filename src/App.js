@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="font-sans bg-gray-200">
-        <header className="bg-white flex items-center justify-between p-4">
+        <header className="bg-white flex flex-col lg:flex-row items-center justify-between p-4">
           <div className="w-32">
             <a href="/"><img src={Logo} alt="logo" /></a>
           </div>
@@ -52,10 +52,10 @@ class App extends Component {
         </div>
 
         {/* Container for middle event finder */}
-        <div className="container mx-auto px-40 mb-16">
-          <div className="bg-gray-900 text-white flex items-center justify-between p-3 -my-8">
-            <div className="flex items-center">
-              <span className="relative">
+        <div className="container mx-auto px-8 xl:px-40 mb-16">
+          <div className="bg-gray-900 text-white flex flex-col lg:flex-row items-center justify-between p-3 -my-8">
+            <div className="flex flex-col lg:flex-row items-center">
+              <span className="relative my-4 lg:my-1">
                 <input type="text" placeholder="Search" className="text-gray-600 rounded px-2 py-3 w-72" />
                 <span className="absolute right-0 top-0 mr-3" style={{ top: "10px" }}>
                   <svg className="text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path className="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path></svg>
@@ -63,7 +63,7 @@ class App extends Component {
               </span>
               <span className="ml-4">within <a href="/" className="border-b border-gray-500 hover:border-gray-100">50 miles</a> of <a href="/" className="border-b border-gray-500 hover:border-gray-100">Mississauga, Ontario</a></span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center my-4 lg:my-0">
               <button className="border-l border-b border-t border-gray-700 px-6 py-2">Groups</button>
               <button className="border-r border-b border-t border-gray-700 bg-gray-700 text-white px-6 py-2 font-bold">Calendar</button>
             </div>
@@ -71,7 +71,7 @@ class App extends Component {
         </div>
 
         {/* Container for main content */}
-        <div className="container mx-auto px-40 flex flex-col flex-col-reverse lg:flex-row">
+        <div className="container mx-auto px-8 xl:px-40 flex flex-col flex-col-reverse lg:flex-row pb-8">
           <div className="w-full lg:w-7/10">
 
             <div className="pl-3 uppercase font-bold text-sm py-2 pb-4">
@@ -179,7 +179,7 @@ class App extends Component {
             </div>
 
           </div>
-          <div className="w-full lg:w-3/10 ml-6">
+          <div className="w-full lg:w-3/10 ml-0 lg:ml-6">
             <div className="pt-2 pb-4">
               &nbsp;
             </div>
@@ -223,6 +223,46 @@ class App extends Component {
 
           </div>
         </div>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white">
+          <div className="container mx-auto px-8 xl:px-40 py-8">
+
+            <div className="flex items-center justify-between border-b border-gray-700 pb-4 mb-4">
+              <div><a href="/" className="font-bold">Start a new group</a></div>
+              <div><a href="/">Logout</a></div>
+            </div>
+            <div className="links mb-8">
+              <ul className="flex">
+                <li className="mr-4"><a href="/">Help</a></li>
+                <li className="mr-4"><a href="/">About Us</a></li>
+                <li className="mr-4"><a href="/">Meetup Pro</a></li>
+                <li className="mr-4"><a href="/">Jobs</a></li>
+                <li className="mr-4"><a href="/">Apps</a></li>
+                <li className="mr-4"><a href="/">API</a></li>
+                <li className="mr-4"><a href="/">Topics</a></li>
+                <li className="mr-4"><a href="/">Browse Cities</a></li>
+                <li className="mr-4"><a href="/">Blog</a></li>
+              </ul>
+            </div>
+            <div className="social mb-6">
+              <div>Follow us</div>
+              <div>Social medias</div>
+            </div>
+
+            <div className="copyright text-sm text-gray-400 mb-4">
+              &copy; 2019 Meetup. Meetup is a wholly owned subsidiary of WeWord Companies Inc.
+            </div>
+
+            <div className="privacy">
+              <ul className="flex">
+                <li className="mr-4"><a href="/">Privacy</a></li>
+                <li className="mr-4"><a href="/">Terms</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </footer>
 
       </div>
     );
